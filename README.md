@@ -26,7 +26,9 @@ npm install
   MYSQL_DB=mydb
 
 6. EJECUTAR PROYECTO
+
 npm run dev
+
 
 7. ACCEDER
 - Abrir navegador en: http://localhost:4000
