@@ -1,0 +1,39 @@
+GUIA RAPIDA: EJECUCION DEL PROYECTO
+
+1. REQUISITOS PREVIOS
+- Node.js (version 14 o superior)
+- MySQL Server instalado y ejecutandose
+- Git instalado
+
+2. CLONAR REPOSITORIO
+git clone https://github.com/diegoncl/Proyecto-Tesis.git
+cd Proyecto-Tesis
+
+3. INSTALAR DEPENDENCIAS
+npm install
+
+4. CONFIGURAR BASE DE DATOS
+- Crear base de datos MySQL llamada 'mydb'
+- Ejecutar esquema: db-schema-mejorado.sql en MySQL
+- Insertar datos iniciales: db-inserts.sql en MySQL
+
+5. CONFIGURAR VARIABLES DE ENTORNO
+- Copiar .env y ajustar credenciales de BD si es necesario:
+  PORT=4000
+  MYSQL_HOST=localhost
+  MYSQL_USER=tu_usuario
+  MYSQL_PASSWORD=tu_password
+  MYSQL_DB=mydb
+
+6. EJECUTAR PROYECTO
+npm run dev
+# O para produccion:
+node index.js
+
+7. ACCEDER
+- Abrir navegador en: http://localhost:4000
+- APIs disponibles en: http://localhost:4000/api/*
+
+PROYECTO LISTO.
+
+Si hay errores, verificar configuracion de BD y dependencias.
