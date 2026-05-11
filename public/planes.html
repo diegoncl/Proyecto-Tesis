@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Planes de Auditoría</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1>Sistema de Gestión de Auditorías</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="planes.html" class="active">Planes de Auditoría</a></li>
+                <li><a href="auditorias.html">Auditorías</a></li>
+                <li><a href="noconformidades.html">No Conformidades</a></li>
+                <li><a href="evidencias.html">Evidencias</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Gestión de Planes de Auditoría</h2>
+            
+            <form id="formularioPlane">
+                <div class="form-group">
+                    <label for="nombrePlane">Nombre del Plan:</label>
+                    <input type="text" id="nombrePlane" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcionPlane">Descripción:</label>
+                    <textarea id="descripcionPlane"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="proyectoPlane">Proyecto Relacionado:</label>
+                    <select id="proyectoPlane">
+                        <option value="">Selecciona un proyecto</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="alcancePlane">Alcance:</label>
+                    <textarea id="alcancePlane" placeholder="Describe el alcance del plan"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="objetivosPlane">Objetivos:</label>
+                    <textarea id="objetivosPlane" placeholder="Define los objetivos principales"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaInicioPlane">Fecha de Inicio:</label>
+                    <input type="date" id="fechaInicioPlane" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaFinPlane">Fecha de Fin:</label>
+                    <input type="date" id="fechaFinPlane" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="responsablePlane">Responsable:</label>
+                    <input type="text" id="responsablePlane">
+                </div>
+
+                <button type="submit" class="btn">Agregar Plan de Auditoría</button>
+            </form>
+
+            <div id="mensaje"></div>
+
+            <div class="list-container">
+                <h3>Planes de Auditoría Registrados</h3>
+                <div id="listaPlanes"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/planes.js"></script>
+</body>
+</html>

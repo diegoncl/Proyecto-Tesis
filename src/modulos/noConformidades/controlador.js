@@ -3,7 +3,12 @@ const TABLA = 'no_conformidades';
 const PK = 'idno_conformidades';
 
 async function todos() {
-    return db.todos(TABLA);
+    return db.query(
+        `SELECT nc.*, a.codigo AS auditoria_codigo, a.tipo AS auditoria_tipo, p.nombre AS plan_nombre
+         FROM no_conformidades nc
+         LEFT JOIN auditorias a ON nc.auditoria_id = a.idauditorias
+         LEFT JOIN planes_auditoria p ON a.plan_auditoria_id = p.idplanes_auditoria`
+    );
 }
 
 async function uno(id) {

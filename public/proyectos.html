@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Proyectos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1>Sistema de Gestión de Auditorías</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="proyectos.html" class="active">Proyectos</a></li>
+                <li><a href="planes.html">Planes de Auditoría</a></li>
+                <li><a href="auditorias.html">Auditorías</a></li>
+                <li><a href="noconformidades.html">No Conformidades</a></li>
+                <li><a href="evidencias.html">Evidencias</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Gestión de Proyectos</h2>
+            
+            <form id="formularioProyecto">
+                <div class="form-group">
+                    <label for="nombreProyecto">Nombre del Proyecto:</label>
+                    <input type="text" id="nombreProyecto" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcionProyecto">Descripción:</label>
+                    <textarea id="descripcionProyecto"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaInicioProyecto">Fecha de Inicio:</label>
+                    <input type="date" id="fechaInicioProyecto" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaFinProyecto">Fecha de Fin:</label>
+                    <input type="date" id="fechaFinProyecto" required>
+                </div>
+
+                <button type="submit" class="btn">Agregar Proyecto</button>
+            </form>
+
+            <div id="mensaje"></div>
+
+            <div class="list-container">
+                <h3>Proyectos Registrados</h3>
+                <div id="listaProyectos"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/proyectos.js"></script>
+</body>
+</html>

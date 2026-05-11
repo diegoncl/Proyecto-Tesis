@@ -1,12 +1,14 @@
 const db = require('../../DB/mysql');
-const TABLA = 'planes_auditoria';
-const PK = 'idplanes_auditoria';
+const TABLA = 'auditorias';
+const PK = 'idauditorias';
 
 async function todos() {
     return db.query(
-        `SELECT p.*, pr.nombre AS proyecto_nombre
-         FROM planes_auditoria p
-         LEFT JOIN proyectos pr ON p.proyecto_id = pr.idproyectos`
+        `SELECT a.*, p.nombre AS plan_nombre, pr.nombre AS proyecto_nombre, u.nombre AS auditor_nombre
+         FROM auditorias a
+         LEFT JOIN planes_auditoria p ON a.plan_auditoria_id = p.idplanes_auditoria
+         LEFT JOIN proyectos pr ON p.proyecto_id = pr.idproyectos
+         LEFT JOIN usuarios u ON a.auditor_id = u.idusuarios`
     );
 }
 

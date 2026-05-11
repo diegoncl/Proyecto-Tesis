@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Evidencias</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1>Sistema de Gestión de Auditorías</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="planes.html">Planes de Auditoría</a></li>
+                <li><a href="auditorias.html">Auditorías</a></li>
+                <li><a href="noconformidades.html">No Conformidades</a></li>
+                <li><a href="evidencias.html" class="active">Evidencias</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Gestión de Evidencias</h2>
+            
+            <form id="formularioEvidencia">
+                <div class="form-group">
+                    <label for="nombreEvidencia">Nombre de la Evidencia:</label>
+                    <input type="text" id="nombreEvidencia" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcionEvidencia">Descripción:</label>
+                    <textarea id="descripcionEvidencia"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoEvidencia">Tipo de Evidencia:</label>
+                    <select id="tipoEvidencia" required>
+                        <option value="Documento">Documento</option>
+                        <option value="Fotografía">Fotografía</option>
+                        <option value="Entrevista">Entrevista</option>
+                        <option value="Registro">Registro</option>
+                        <option value="Observación">Observación</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="urlEvidencia">URL o Ruta de la Evidencia:</label>
+                    <input type="text" id="urlEvidencia" placeholder="ej: /evidencias/archivo.pdf">
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaEvidencia">Fecha de Obtención:</label>
+                    <input type="date" id="fechaEvidencia" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="autorEvidencia">Autor/Auditor:</label>
+                    <input type="text" id="autorEvidencia">
+                </div>
+
+                <div class="form-group">
+                    <label for="noConformidadEvidencia">No Conformidad Relacionada:</label>
+                    <select id="noConformidadEvidencia">
+                        <option value="">Selecciona una no conformidad</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="procesoRelacionado">Proceso Relacionado:</label>
+                    <input type="text" id="procesoRelacionado" placeholder="ej: Proceso de compras">
+                </div>
+
+                <div class="form-group">
+                    <label for="hallazgoEvidencia">Hallazgo Asociado:</label>
+                    <textarea id="hallazgoEvidencia" placeholder="Describe el hallazgo relacionado con esta evidencia"></textarea>
+                </div>
+
+                <button type="submit" class="btn">Agregar Evidencia</button>
+            </form>
+
+            <div id="mensaje"></div>
+
+            <div class="list-container">
+                <h3>Evidencias Registradas</h3>
+                <div id="listaEvidencias"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/evidencias.js"></script>
+</body>
+</html>

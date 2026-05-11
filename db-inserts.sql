@@ -27,3 +27,5 @@ INSERT INTO `proyectos` (`nombre`, `descripcion`, `fecha_inicio`, `fecha_fin`)
 VALUES ('Proyecto de Calidad', 'Mejora de procesos de calidad', '2024-03-01', '2024-08-31');
 INSERT INTO `proyectos` (`nombre`, `descripcion`, `fecha_inicio`, `fecha_fin`) 
 VALUES ('Proyecto de Cumplimiento', 'Asegurar cumplimiento normativo', '2024-02-01', '2024-10-31');
+
+

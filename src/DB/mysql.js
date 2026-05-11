@@ -57,10 +57,16 @@ async function eliminar(tabla, data, pkField = 'id') {
     return result;
 }
 
+async function query(sql, params = []) {
+    const [rows] = await pool.query(sql, params);
+    return rows;
+}
+
 module.exports = {
     todos,
     uno,
     agregar,
     actualizar,
     eliminar,
+    query,
 };

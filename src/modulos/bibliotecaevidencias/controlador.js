@@ -3,7 +3,12 @@ const TABLA = 'biblioteca_evidencias';
 const PK = 'idbiblioteca_evidencias';
 
 async function todos() {
-    return db.todos(TABLA);
+    return db.query(
+        `SELECT be.*, nc.titulo AS no_conformidad_titulo, a.codigo AS auditoria_codigo
+         FROM biblioteca_evidencias be
+         LEFT JOIN no_conformidades nc ON be.no_conformidad_id = nc.idno_conformidades
+         LEFT JOIN auditorias a ON nc.auditoria_id = a.idauditorias`
+    );
 }
 
 async function uno(id) {

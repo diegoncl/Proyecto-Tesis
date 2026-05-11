@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Auditorías</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1>Sistema de Gestión de Auditorías</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="planes.html">Planes de Auditoría</a></li>
+                <li><a href="auditorias.html" class="active">Auditorías</a></li>
+                <li><a href="noconformidades.html">No Conformidades</a></li>
+                <li><a href="evidencias.html">Evidencias</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Gestión de Auditorías</h2>
+
+            <form id="formularioAuditoria">
+                <div class="form-group">
+                    <label for="codigoAuditoria">Código:</label>
+                    <input type="text" id="codigoAuditoria" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoAuditoria">Tipo de Auditoría:</label>
+                    <input type="text" id="tipoAuditoria" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="planAuditoria">Plan de Auditoría Relacionado:</label>
+                    <select id="planAuditoria">
+                        <option value="">Selecciona un plan</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="auditorIdAuditoria">Auditor Responsable:</label>
+                    <select id="auditorIdAuditoria">
+                        <option value="">Selecciona un auditor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaProgramadaAuditoria">Fecha Programada:</label>
+                    <input type="date" id="fechaProgramadaAuditoria" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaEjecucionAuditoria">Fecha de Ejecución:</label>
+                    <input type="date" id="fechaEjecucionAuditoria">
+                </div>
+
+                <div class="form-group">
+                    <label for="auditorAuditoria">Auditor:</label>
+                    <input type="text" id="auditorAuditoria">
+                </div>
+
+                <div class="form-group">
+                    <label for="estadoAuditoria">Estado:</label>
+                    <input type="text" id="estadoAuditoria">
+                </div>
+
+                <div class="form-group">
+                    <label for="puntuacionAuditoria">Puntuación Total:</label>
+                    <input type="text" id="puntuacionAuditoria">
+                </div>
+
+                <button type="submit" class="btn">Agregar Auditoría</button>
+            </form>
+
+            <div id="mensaje"></div>
+
+            <div class="list-container">
+                <h3>Auditorías Registradas</h3>
+                <div id="listaAuditorias"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auditorias.js"></script>
+</body>
+</html>

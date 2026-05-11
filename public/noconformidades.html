@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de No Conformidades</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1>Sistema de Gestión de Auditorías</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="planes.html">Planes de Auditoría</a></li>
+                <li><a href="auditorias.html">Auditorías</a></li>
+                <li><a href="noconformidades.html" class="active">No Conformidades</a></li>
+                <li><a href="evidencias.html">Evidencias</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Gestión de No Conformidades</h2>
+            
+            <form id="formularioNoConformidad">
+                <div class="form-group">
+                    <label for="tituloNC">Título:</label>
+                    <input type="text" id="tituloNC" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcionNC">Descripción:</label>
+                    <textarea id="descripcionNC" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="causaNC">Causa Raíz:</label>
+                    <textarea id="causaNC"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="auditoriaNC">Auditoría Relacionada:</label>
+                    <select id="auditoriaNC">
+                        <option value="">Selecciona una auditoría</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="severidadNC">Severidad:</label>
+                    <select id="severidadNC" required>
+                        <option value="Crítica">Crítica</option>
+                        <option value="Mayor">Mayor</option>
+                        <option value="Menor">Menor</option>
+                        <option value="Observación">Observación</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="planAccionNC">Plan de Acción:</label>
+                    <textarea id="planAccionNC"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaLimiteNC">Fecha Límite de Corrección:</label>
+                    <input type="date" id="fechaLimiteNC">
+                </div>
+
+                <div class="form-group">
+                    <label for="responsableNC">Responsable:</label>
+                    <input type="text" id="responsableNC">
+                </div>
+
+                <div class="form-group">
+                    <label for="estadoNC">Estado:</label>
+                    <select id="estadoNC" required>
+                        <option value="Abierta">Abierta</option>
+                        <option value="En Progreso">En Progreso</option>
+                        <option value="Cerrada">Cerrada</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Agregar No Conformidad</button>
+            </form>
+
+            <div id="mensaje"></div>
+
+            <div class="list-container">
+                <h3>No Conformidades Registradas</h3>
+                <div id="listaNoConformidades"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/noconformidades.js"></script>
+</body>
+</html>

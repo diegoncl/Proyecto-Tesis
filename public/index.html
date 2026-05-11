@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Auditorías</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1>Sistema de Gestión de Auditorías</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Dashboard</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="planes.html">Planes de Auditoría</a></li>
+                <li><a href="auditorias.html">Auditorías</a></li>
+                <li><a href="noconformidades.html">No Conformidades</a></li>
+                <li><a href="evidencias.html">Evidencias</a></li>
+            </ul>
+        </nav>
+
+        <main class="dashboard">
+            <section class="welcome">
+                <h2>Bienvenido al Sistema de Gestión de Auditorías</h2>
+                <p>Selecciona una sección en el menú para comenzar a gestionar auditorías, proyectos, planes y más.</p>
+            </section>
+
+            <section class="cards-container">
+                <div class="card">
+                    <h3>📋 Proyectos</h3>
+                    <p>Gestiona los proyectos de auditoría</p>
+                    <a href="proyectos.html" class="btn">Ir a Proyectos</a>
+                </div>
+
+                <div class="card">
+                    <h3>📅 Planes de Auditoría</h3>
+                    <p>Crea y administra planes de auditoría</p>
+                    <a href="planes.html" class="btn">Ir a Planes</a>
+                </div>
+
+                <div class="card">
+                    <h3>📝 Auditorías</h3>
+                    <p>Registra y gestiona auditorías</p>
+                    <a href="auditorias.html" class="btn">Ir a Auditorías</a>
+                </div>
+
+                <div class="card">
+                    <h3>⚠️ No Conformidades</h3>
+                    <p>Registra no conformidades encontradas</p>
+                    <a href="noconformidades.html" class="btn">Ir a No Conformidades</a>
+                </div>
+
+                <div class="card">
+                    <h3>📁 Evidencias</h3>
+                    <p>Almacena y gestiona evidencias</p>
+                    <a href="evidencias.html" class="btn">Ir a Evidencias</a>
+                </div>
+            </section>
+
+            <section class="stats">
+                <h2>Estadísticas</h2>
+                <div class="stats-container">
+                    <div class="stat">
+                        <span class="stat-number" id="proyectosCount">0</span>
+                        <span class="stat-label">Proyectos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="planesCount">0</span>
+                        <span class="stat-label">Planes de Auditoría</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="auditoriasCount">0</span>
+                        <span class="stat-label">Auditorías</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="noconformidadesCount">0</span>
+                        <span class="stat-label">No Conformidades</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="evidenciasCount">0</span>
+                        <span class="stat-label">Evidencias</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
