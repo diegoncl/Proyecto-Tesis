@@ -27,8 +27,6 @@ npm install
 
 6. EJECUTAR PROYECTO
 npm run dev
-# O para produccion:
-node index.js
 
 7. ACCEDER
 - Abrir navegador en: http://localhost:4000
